@@ -1,1 +1,1 @@
-alert("alert from lib")
+document.write("<br>lib from same repo")
