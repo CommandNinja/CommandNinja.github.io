@@ -1,1 +1,1 @@
-document.write("<br>lib from same repo")
+document.write("<br>written from js file in the same repo")
