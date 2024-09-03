@@ -1,1 +1,0 @@
-document.write("<br>written from js file in the same repo")
