@@ -1,0 +1,15 @@
+<script>
+fetch("https://prototype-12.github.io/videos/test.webm")
+.then(res => res.blob())//.text()
+.then(blobResponce => {
+   let url = URL.createObjectURL(blobResponce)
+   let video = document.createElement("video")
+   let source = document.createElement("source")
+   video.append(source)
+   video.controls = ""
+   source.src = url
+   source.type = "video/webm"
+   document.body.append(video)
+})
+.catch(err => console.log("Fetch error", err));
+</script>
