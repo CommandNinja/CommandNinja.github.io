@@ -1,25 +1,92 @@
-<title>Prototype12's Stuff</title>
-<h1>Projects</h1>
-<dl>
-  <b><dt>Neural Networks(On Indefinite Hold)</dt></b>
-    <i><dd>Basic neural network lib.</dd></i>
-    <dd><a href="./Neural-Networks" target="_blank">Neural Networks Demo</a></dd>
-  <b><dt>WFC(On Indefinite Hold)</dt></b>
-    <i><dd>Wave function collapse algorithm.</dd></i>
-  <b><dt>Video maker/editor(On Indefinite Hold)</dt></b>
-    <i><dd>A video maker in pure JS.</dd></i>
-  <b><dt>Physics Engine(WIP)</dt></b>
-    <i><dd>A basic box only 2d physics engine.</dd></i>
-  <b><dt>Procedural Chemicals(Completed)</dt></b>
-    <i><dd>Procedural creation and reaction of new elements/materials/chemicals.</dd></i>
-    <dd><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</a></dd>
-</dl>
-<h1>Games</h1>
-<dl>
-  <b><dt>Undefined</dt></b>
-    <i><dd>Undefined</dd></i>
-</dl>
-<h1>Portal</h1>
+<style>
+.mainBox {
+  background-color: gray;
+  margin: 5;
+  padding: 10;
+  flex-direction: column;
+  display: flex
+}
+.subBox {
+  background-color: lightgray;
+  margin: 5;
+  padding: 10; 
+}
+.menuButton {
+  cursor: pointer;
+}
+</style>
+<div style="display:flex; height: 100%;">
+  <div class="mainBox" style="width:100">
+    <!--div class="subBox" style="display: none">Back</div-->
+    <div class="subBox" style="overflow-x: hidden; user-select: none">
+      <div id=menuHome class="menuButton" onclick="changePage(0)">Home</div>
+      <div id=menuProjects class="menuButton" onclick="changePage(1)">Projects</div>
+      <div id=menuVideos class="menuButton" onclick="changePage(2)">Videos</div>
+      <div id=menuGames class="menuButton" onclick="changePage(3)">Games</div>
+      <div id=menuAlgorithms class="menuButton" onclick="changePage(4)">Algorithms</div>
+      <div id=menuPortal class="menuButton" onclick="changePage(5)">Portal</div>
+    </div>
+  </div>
+  <div id=homePage class="mainBox" style="flex-grow: 1"><!-- HOME PAGE -->
+    <div class="subBox"><h1>Home Page</h1></div>
+    <div class="subBox" style="overflow-x: auto">
+      <div>
+        <h3>Recent projects</h3>
+        <dl>
+          <dt>Undefined</dt>
+            <i><dd>Undefined</dd></i>
+          <dt>Undefined</dt>
+            <i><dd>Undefined</dd></i>
+        </dl>
+      </div>
+      <div>
+        <h3>About me</h3>
+        <dl>
+          <dt>Undefined</dt>
+            <i><dd>Undefined</dd></i>
+          <dt>Undefined</dt>
+            <i><dd>Undefined</dd></i>
+        </dl>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <dl>
+          <dt>Undefined</dt>
+            <i><dd>Undefined</dd></i>
+          <dt>Undefined</dt>
+            <i><dd><a href="index.html" target="_blank">Home</a></dd></i>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div id=projectPage class="mainBox" style="flex-grow: 1"><!-- PROJECT PAGE -->
+    <div class="subBox"><h1>Projects</h1></div>
+    <div class="subBox" style="overflow-x: auto">
+      <dl>
+        <dt><b>Neural Networks(Completed)</b></dt>
+          <dd><i>Basic neural network lib.</i></dd>
+          <dd><a href="./Neural-Networks" target="_blank">Neural Networks Demo</a></dd>
+        <dt><b>WFC(On Indefinite Hold)</b></dt>
+          <dd><i>Wave function collapse algorithm.</i></dd>
+        <dt><b>Video maker/editor(On Indefinite Hold)</b></dt>
+          <dd><i>A video maker in pure JS.</i></dd>
+        <dt><b>Physics Engine(WIP)</b></dt>
+          <dd><i>A basic box only 2d physics engine.</i></dd>
+        <dt><b>Procedural Chemicals(Completed)</b></dt>
+          <dd><i>Procedural creation and reaction of new elements/materials/chemicals.</i></dd>
+        <dd><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</a></dd>
+      </dl>
+    </div>
+  </div>
+  <div id=videoPage class="mainBox" style="flex-grow: 1"><!-- VIDEO PAGE -->
+    <div class="subBox"><h1>Videos</h1></div>
+    <div class="subBox" style="overflow-x: auto">
+a
+    </div>
+  </div>
+  <div id=portalPage class="mainBox" style="flex-grow: 1"><!-- PORTAL PAGE -->
+    <div class="subBox"><h1>Portal</h1></div>
+    <div class="subBox" style="overflow-x: auto">
 <dl>
   <b><dt>Kadin's Stuff</dt></b>
     <i><dd>My friend Kadin's stuff</dd></i>
@@ -28,3 +95,21 @@
     <i><dd>An interesting fellow JS programmer</dd></i>
     <dd><a href="https://xem.github.io/" target="_blank">Xem's homepage</a></dd>
 </dl>
+    </div>
+  </div>
+</div><!-- ^ NEW PAGES HERE ^ -->
+<script>
+changePage(1)
+function changePage(page) {
+  homePage.style.display = page==0?"block":"none"
+  menuHome.style.fontWeight = page==0?"bold":"normal"
+  projectPage.style.display = page==1?"block":"none"
+  menuProjects.style.fontWeight = page==1?"bold":"normal"
+  videoPage.style.display = page==2?"block":"none"
+  menuVideos.style.fontWeight = page==2?"bold":"normal"
+  menuGames.style.fontWeight = page==3?"bold":"normal"
+  menuAlgorithms.style.fontWeight = page==4?"bold":"normal"
+  portalPage.style.display = page==5?"block":"none"
+  menuPortal.style.fontWeight = page==5?"bold":"normal"
+}
+</script>
