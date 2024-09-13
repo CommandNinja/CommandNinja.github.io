@@ -6,6 +6,7 @@
   padding: 10;
   flex-direction: column;
   display: flex
+  overflow-x: auto
 }
 .subBox {
   background-color: lightgray;
@@ -30,39 +31,37 @@
   </div>
   <div id=homePage class="mainBox" style="flex-grow: 1"><!-- HOME PAGE -->
     <div class="subBox"><h1>Home Page</h1></div>
-    <div class="subBox" style="overflow-x: auto">
-      <div>
-        <h3>Recent projects</h3>
-        <dl>
-          <dt>Undefined</dt>
-            <i><dd>Undefined</dd></i>
-          <dt>Undefined</dt>
-            <i><dd>Undefined</dd></i>
-        </dl>
-      </div>
-      <div>
-        <h3>About me</h3>
-        <dl>
-          <dt>Undefined</dt>
-            <i><dd>Undefined</dd></i>
-          <dt>Undefined</dt>
-            <i><dd>Undefined</dd></i>
-        </dl>
-      </div>
-      <div>
-        <h3>Links</h3>
-        <dl>
-          <dt>Undefined</dt>
-            <i><dd>Undefined</dd></i>
-          <dt>Undefined</dt>
-            <i><dd><a href="index.html" target="_blank">Home</a></dd></i>
-        </dl>
-      </div>
+    <div class="subBox">
+      <h3>Recent projects</h3>
+      <dl>
+        <dt>Undefined</dt>
+          <dd><i>Undefined</i></dd>
+        <dt>Undefined</dt>
+          <dd><i>Undefined</i></dd>
+      </dl>
+    </div>
+    <div class="subBox">
+      <h3>About me</h3>
+      <dl>
+        <dt>Undefined</dt>
+          <dd><i>Undefined</i></dd>
+        <dt>Undefined</dt>
+          <dd><i>Undefined</i></dd>
+      </dl>
+    </div>
+    <div class="subBox">
+      <h3>Links</h3>
+      <dl>
+        <dt>Undefined</dt>
+          <dd><i>Undefined</i></dd>
+        <dt>Undefined</dt>
+          <dd><a href="index.html" target="_blank"><i>Home</i></a></dd>
+      </dl>
     </div>
   </div>
   <div id=projectPage class="mainBox" style="flex-grow: 1"><!-- PROJECT PAGE -->
     <div class="subBox"><h1>Projects</h1></div>
-    <div class="subBox" style="overflow-x: auto">
+    <div class="subBox">
       <dl>
         <dt><b>Neural Networks(Completed)</b></dt>
           <dd><i>Basic neural network lib.</i></dd>
@@ -85,31 +84,50 @@
 a
     </div>
   </div>
+  <div id=gamesPage class="mainBox" style="flex-grow: 1"><!-- GAMES PAGE -->
+    <div class="subBox"><h1>Games</h1></div>
+    <div class="subBox" style="overflow-x: auto">
+a
+    </div>
+  </div>
+  <div id=algorithmsPage class="mainBox" style="flex-grow: 1"><!-- ALGORITHMS PAGE -->
+    <div class="subBox"><h1>Algorithms</h1></div>
+    <div class="subBox" style="overflow-x: auto">
+a
+    </div>
+  </div>
   <div id=portalPage class="mainBox" style="flex-grow: 1"><!-- PORTAL PAGE -->
     <div class="subBox"><h1>Portal</h1></div>
     <div class="subBox" style="overflow-x: auto">
 <dl>
-  <b><dt>Kadin's Stuff</dt></b>
-    <i><dd>My friend Kadin's stuff</dd></i>
+  <dt><b>Kadin's Stuff</b></dt>
+    <dd><i>My friend Kadin's stuff</i></dd>
     <dd><a href="https://kadincool.github.io/" target="_blank">Kadin's homepage</a></dd>
-  <b><dt>Xem's Stuff</dt></b>
-    <i><dd>An interesting fellow JS programmer</dd></i>
+  <dt><b>Xem's Stuff</b></dt>
+    <dd><i>An interesting fellow JS programmer</i></dd>
     <dd><a href="https://xem.github.io/" target="_blank">Xem's homepage</a></dd>
 </dl>
     </div>
   </div>
 </div><!-- ^ NEW PAGES HERE ^ -->
 <script>
-changePage(1)
+changePage(0)
 function changePage(page) {
   homePage.style.display = page==0?"block":"none"
   menuHome.style.fontWeight = page==0?"bold":"normal"
+
   projectPage.style.display = page==1?"block":"none"
   menuProjects.style.fontWeight = page==1?"bold":"normal"
+
   videoPage.style.display = page==2?"block":"none"
   menuVideos.style.fontWeight = page==2?"bold":"normal"
+
+  gamesPage.style.display = page==3?"block":"none"
   menuGames.style.fontWeight = page==3?"bold":"normal"
+
+  algorithmsPage.style.display = page==4?"block":"none"
   menuAlgorithms.style.fontWeight = page==4?"bold":"normal"
+
   portalPage.style.display = page==5?"block":"none"
   menuPortal.style.fontWeight = page==5?"bold":"normal"
 }
