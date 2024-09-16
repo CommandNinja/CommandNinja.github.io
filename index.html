@@ -1,5 +1,10 @@
 <title>Prototype12's Stuff</title>
 <style>
+@font-face {
+  font-family: 'Bitty';
+  src: url('bitty.ttf');
+  //font-weight: bold;
+}
 .mainBox {
   background-color: gray;
   margin: 5;
@@ -15,10 +20,11 @@
 }
 .menuButton {
   cursor: pointer;
+  padding: 5 0 5 0;
 }
 </style>
-<div style="display:flex; height: 100%;">
-  <div class="mainBox" style="width:100">
+<div style="display:flex; height: 100%; font-family: Bitty">
+  <div class="mainBox" style="width: fit-content;">
     <!--div class="subBox" style="display: none">Back</div-->
     <div class="subBox" style="overflow-x: hidden; user-select: none">
       <div id=menuHome class="menuButton" onclick="changePage(0)">Home</div>
@@ -63,8 +69,8 @@
     <div class="subBox"><h1>Projects</h1></div>
     <div class="subBox">
       <dt><b>Neural Networks(Completed)</b></dt>
-        <dd><i>Basic neural network lib.</i></dd>
-        <dd><a href="./Neural-Networks" target="_blank">Neural Networks Demo</a></dd>
+        <dd>Basic neural network lib.</dd>
+        <dd><a href="./Neural-Networks" target="_blank"><i>Neural Networks Demo</i></a></dd>
         <dd><iframe src="https://prototype-12.github.io/Neural-Networks/index.html" width=400 height=200>iframe not loaded</iframe></dd>
     </div>
     <div class="subBox">
@@ -81,8 +87,8 @@
     </div>
     <div class="subBox">
       <dt><b>Procedural Chemicals(Completed)</b></dt>
-        <dd><i>Procedural creation and reaction of new elements/materials/chemicals.</i></dd>
-        <dd><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</a></dd>
+        <dd>Procedural creation and reaction of new elements/materials/chemicals.</dd>
+        <dd><i><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</i></a></dd>
     </div>
   </div>
   <div id=videoPage class="mainBox" style="flex-grow: 1"><!-- VIDEO PAGE -->
@@ -105,26 +111,26 @@
   <div id=gamesPage class="mainBox" style="flex-grow: 1"><!-- GAMES PAGE -->
     <div class="subBox"><h1>Games</h1></div>
     <div class="subBox">
-a
+WIP
     </div>
   </div>
   <div id=algorithmsPage class="mainBox" style="flex-grow: 1"><!-- ALGORITHMS PAGE -->
     <div class="subBox"><h1>Algorithms</h1></div>
     <div class="subBox">
-a
+WIP
     </div>
   </div>
   <div id=portalPage class="mainBox" style="flex-grow: 1"><!-- PORTAL PAGE -->
     <div class="subBox"><h1>Portal</h1></div>
     <div class="subBox">
       <dt><b>Kadin's Stuff</b></dt>
-        <dd><i>My friend Kadin's stuff</i></dd>
-        <dd><a href="https://kadincool.github.io/" target="_blank">Kadin's homepage</a></dd>
+        <dd>My friend Kadin's stuff</dd>
+        <dd><a href="https://kadincool.github.io/" target="_blank"><i>Kadin's homepage</i></a></dd>
     </div>
     <div class="subBox">
       <dt><b>Xem's Stuff</b></dt>
-        <dd><i>An interesting fellow JS programmer</i></dd>
-        <dd><a href="https://xem.github.io/" target="_blank">Xem's homepage</a></dd>
+        <dd>An interesting fellow JS programmer</dd>
+        <dd><a href="https://xem.github.io/" target="_blank"><i>Xem's homepage</i></a></dd>
     </div>
   </div>
 </div><!-- ^ NEW PAGES HERE ^ -->
