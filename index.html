@@ -15,6 +15,7 @@ body {
   flex-direction: column;
   display: flex;
   overflow-x: auto;
+  display: none;
 }
 .subBox {
   background-color: #ddd;
@@ -48,7 +49,7 @@ h3 {
 }
 </style>
 <div style="display:flex; height: 100%; font-family: Bitty">
-  <div class="mainBox" style="width: 125;">
+  <div class="mainBox" style="width: 125; display: block">
     <!--div class="subBox" style="display: none">Back</div-->
     <div class="subBox" style="overflow-x: hidden; user-select: none">
       <div id=menuHome class="menuButton" onclick="changePage(0)">Home</div>
@@ -92,43 +93,41 @@ h3 {
   <div id=projectPage class="mainBox" style="flex-grow: 1"><!-- PROJECT PAGE -->
     <div class="subBox"><h1>Projects</h1></div>
     <div class="subBox"><!-- WIP SECTION -->
-      <h3>WebSite(WIP)</h3>
-        <dd>Website TODO list:</dd>
-<dd>
-<dl>
-        <dd>-Algorithms Page</dd>
-        <dd>-Games Page</dd>
-        <dd>-Recent Projects (Home Page)</dd>
-        <dd>-About Me (Home Page)</dd>
-        <dd>-Links (Home Page)</dd>
-</dl>
-</dd>
+      <h3>WebSite (WIP)</h3>
+      <dd>Website TODO list:</dd>
+      <dd>
+        <dl>
+          <dd>-Improve Home Page</dd>
+          <dd>-Algorithms Page</dd>
+          <dd>-Games Page</dd>
+        </dl>
+      </dd>
     </div>
     <div class="subBox"><!-- On Indefinite Hold SECTION -->
-      <h3>WFC(On Indefinite Hold)</h3>
+      <h3>WFC (On Indefinite Hold)</h3>
         <dd>Wave function collapse algorithm.</dd>
         <dd><i>Not uploaded</i></dd>
     </div>
     <div class="subBox">
-      <h3>Video maker/editor(On Indefinite Hold)</h3>
+      <h3>Video maker/editor (On Indefinite Hold)</h3>
         <dd>A video maker in pure JS.</dd>
         <dd><i>Not uploaded</i></dd>
     </div>
     <div class="subBox">
-      <h3>Physics Engine(On Indefinite Hold)</h3>
+      <h3>Physics Engine (On Indefinite Hold)</h3>
         <dd>A basic box only 2d physics engine.</dd>
         <dd><i>Not uploaded</i></dd>
     </div>
     <div class="subBox"><!-- Completed SECTION -->
-      <h3>Procedural Chemicals(Completed)</h3>
+      <h3>Procedural Chemicals (Completed)</h3>
         <dd>Procedural creation and reaction of new elements/materials/chemicals.</dd>
         <dd><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</a></dd>
     </div>
     <div class="subBox">
-      <h3>Neural Networks(Completed)</h3>
+      <h3>Neural Networks (Completed)</h3>
         <dd>Basic neural network lib.</dd>
         <dd><a href="./Neural-Networks" target="_blank">Neural Networks Demo</a></dd>
-        <dd><iframe src="https://prototype-12.github.io/Neural-Networks/index.html" width=400 height=200>iframe not loaded</iframe></dd>
+        <dd><iframe src="https://prototype-12.github.io/Neural-Networks/index.html" width=400 height=400>iframe not loaded</iframe></dd>
     </div>
   </div>
 
@@ -137,7 +136,7 @@ h3 {
     <div class="subBox">
       <h3>Test Video</h3>
       <dd>
-        <video controls width="500" style="border: 3px solid #73AD21; //margin: 25 0 50 100;">
+        <video controls width=500 style="border: 3px solid #73AD21; //margin: 25 0 50 100;">
           <source src="videos/test.webm" type="video/webm" />
         </video>
       </dd>
@@ -151,7 +150,7 @@ h3 {
       <dd>Or I may add a release time stamp(unix time of course) to videos in the furture.</dd>
       <dd>If the above happens please check the video-list-format.txt for changes.</dd>
       <dd>Example Code:</dd>
-      <dd><iframe src="fetch-example.txt" width=400 height=200>iframe not loaded</iframe></dd>
+      <dd><iframe src="fetch-example.txt" width=400 height=400>iframe not loaded</iframe></dd>
     </div>
   </div>
   <div id=gamesPage class="mainBox" style="flex-grow: 1"><!-- GAMES PAGE -->
