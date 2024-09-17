@@ -27,16 +27,16 @@ body {
 }
 .b {
   text-shadow:
-  1px 0px 0px black,
-  0px 1px 0px black,
-  1px 1px 0px black;
+  .5px 0px 0px black,
+  0px .5px 0px black,
+  .5px .5px 0px black;
   text-transform: uppercase;
 }
 h1 {
   text-shadow:
-  3px 0px 0px black,
-  0px 3px 0px black,
-  3px 3px 0px black;
+  2px 0px 0px black,
+  0px 2px 0px black,
+  2px 2px 0px black;
   font-size: 40px;/*needs to be a multiple of 8 for font*/
 }
 h3 {
@@ -63,25 +63,23 @@ h3 {
     <div class="subBox"><h1>Home Page</h1></div>
     <div class="subBox">
       <h3>Recent projects</h3>
-<dd>
-<dl>
-        <dt>This Website</dt>
-        <dd><i>(Progress: 1/10)</i></dd>
-</dl>
-</dd>
+      <dd>This Website</dd>
     </div>
     <div class="subBox">
       <h3>About Me</h3>
       <dd>
       <dl>
-        <dt>Undefined</dt>
-          <dd>Undefined</dd>
-        <dt>Undefined</dt>
-          <dd>Undefined</dd>
+        <dt>Goals:</dt>
+          <dd>To become an full time AI researcher.</dd>
+          <dd>Or go into full time Artificial Life research.</dd>
+        <dt>Hobbies:</dt>
+          <dd>Programing</dd>
+          <dd>Reading</dd>
+          <dd>Building and playing games</dd>
       </dl>
       </dd>
     </div>
-    <div class="subBox">
+    <!--div class="subBox">
       <h3>Links</h3>
       <dl>
         <dt>Undefined</dt>
@@ -89,22 +87,42 @@ h3 {
         <dt>Undefined</dt>
           <dd><a href="about:blank" target="_blank">about:blank</a></dd>
       </dl>
-    </div>
+    </div-->
   </div>
   <div id=projectPage class="mainBox" style="flex-grow: 1"><!-- PROJECT PAGE -->
     <div class="subBox"><h1>Projects</h1></div>
-    <div class="subBox">
+    <div class="subBox"><!-- WIP SECTION -->
       <h3>WebSite(WIP)</h3>
         <dd>Website TODO list:</dd>
 <dd>
 <dl>
         <dd>-Algorithms Page</dd>
         <dd>-Games Page</dd>
-        <dd>-Recent Projects(home page)</dd>
-        <dd>-About Me(home page)</dd>
-        <dd>-Links(home page)</dd>
+        <dd>-Recent Projects (Home Page)</dd>
+        <dd>-About Me (Home Page)</dd>
+        <dd>-Links (Home Page)</dd>
 </dl>
 </dd>
+    </div>
+    <div class="subBox"><!-- On Indefinite Hold SECTION -->
+      <h3>WFC(On Indefinite Hold)</h3>
+        <dd>Wave function collapse algorithm.</dd>
+        <dd><i>Not uploaded</i></dd>
+    </div>
+    <div class="subBox">
+      <h3>Video maker/editor(On Indefinite Hold)</h3>
+        <dd>A video maker in pure JS.</dd>
+        <dd><i>Not uploaded</i></dd>
+    </div>
+    <div class="subBox">
+      <h3>Physics Engine(On Indefinite Hold)</h3>
+        <dd>A basic box only 2d physics engine.</dd>
+        <dd><i>Not uploaded</i></dd>
+    </div>
+    <div class="subBox"><!-- Completed SECTION -->
+      <h3>Procedural Chemicals(Completed)</h3>
+        <dd>Procedural creation and reaction of new elements/materials/chemicals.</dd>
+        <dd><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</a></dd>
     </div>
     <div class="subBox">
       <h3>Neural Networks(Completed)</h3>
@@ -112,24 +130,8 @@ h3 {
         <dd><a href="./Neural-Networks" target="_blank">Neural Networks Demo</a></dd>
         <dd><iframe src="https://prototype-12.github.io/Neural-Networks/index.html" width=400 height=200>iframe not loaded</iframe></dd>
     </div>
-    <div class="subBox">
-      <h3>WFC(On Indefinite Hold)</h3>
-        <dd>Wave function collapse algorithm.</dd>
-    </div>
-    <div class="subBox">
-      <h3>Video maker/editor(On Indefinite Hold)</h3>
-        <dd>A video maker in pure JS.</dd>
-    </div>
-    <div class="subBox">
-      <h3>Physics Engine(On Indefinite Hold)</h3>
-        <dd>A basic box only 2d physics engine.</dd>
-    </div>
-    <div class="subBox">
-      <h3>Procedural Chemicals(Completed)</h3>
-        <dd>Procedural creation and reaction of new elements/materials/chemicals.</dd>
-        <dd><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</a></dd>
-    </div>
   </div>
+
   <div id=videoPage class="mainBox" style="flex-grow: 1"><!-- VIDEO PAGE -->
     <div class="subBox"><h1>Videos</h1></div>
     <div class="subBox">
@@ -143,11 +145,13 @@ h3 {
     </div>
     <div class="subBox">
       <h3>Video format</h3>
+      <dd><i>The idea for this section is that people can remotly obtain and watch videos with their own software.</i></dd>
       <dd>I've stored and formated my videos in such a way that they can be accessed remotely and easily.</dd>
-      <dd><iframe src="fetch-example.txt" width=400 height=200>iframe not loaded</iframe></dd>
       <dd>You can compare the video-list.txt file with a localy saved one for new videos.</dd>
       <dd>Or I may add a release time stamp(unix time of course) to videos in the furture.</dd>
       <dd>If the above happens please check the video-list-format.txt for changes.</dd>
+      <dd>Example Code:</dd>
+      <dd><iframe src="fetch-example.txt" width=400 height=200>iframe not loaded</iframe></dd>
     </div>
   </div>
   <div id=gamesPage class="mainBox" style="flex-grow: 1"><!-- GAMES PAGE -->
