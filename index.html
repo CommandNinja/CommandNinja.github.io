@@ -3,10 +3,13 @@
 @font-face {
   font-family: 'Bitty';
   src: url('bitty.ttf');
-  //font-weight: bold;
+  font-weight: bold;
+}
+body {
+  background-color: #444;
 }
 .mainBox {
-  background-color: gray;
+  background-color: #aaa;
   margin: 5;
   padding: 10;
   flex-direction: column;
@@ -14,7 +17,7 @@
   overflow-x: auto;
 }
 .subBox {
-  background-color: lightgray;
+  background-color: #ddd;
   margin: 5;
   padding: 10; 
 }
@@ -22,9 +25,30 @@
   cursor: pointer;
   padding: 5 0 5 0;
 }
+.b {
+  text-shadow:
+  1px 0px 0px black,
+  0px 1px 0px black,
+  1px 1px 0px black;
+  text-transform: uppercase;
+}
+h1 {
+  text-shadow:
+  3px 0px 0px black,
+  0px 3px 0px black,
+  3px 3px 0px black;
+  font-size: 40px;/*needs to be a multiple of 8 for font*/
+}
+h3 {
+  text-shadow:
+  1px 0px 0px black,
+  0px 1px 0px black,
+  1px 1px 0px black;
+  font-size: 24px;
+}
 </style>
 <div style="display:flex; height: 100%; font-family: Bitty">
-  <div class="mainBox" style="width: fit-content;">
+  <div class="mainBox" style="width: 125;">
     <!--div class="subBox" style="display: none">Back</div-->
     <div class="subBox" style="overflow-x: hidden; user-select: none">
       <div id=menuHome class="menuButton" onclick="changePage(0)">Home</div>
@@ -39,73 +63,91 @@
     <div class="subBox"><h1>Home Page</h1></div>
     <div class="subBox">
       <h3>Recent projects</h3>
-      <dl>
-        <dt>Undefined</dt>
-          <dd><i>Undefined</i></dd>
-        <dt>Undefined</dt>
-          <dd><i>Undefined</i></dd>
-      </dl>
+<dd>
+<dl>
+        <dt>This Website</dt>
+        <dd><i>(Progress: 1/10)</i></dd>
+</dl>
+</dd>
     </div>
     <div class="subBox">
-      <h3>About me</h3>
+      <h3>About Me</h3>
+      <dd>
       <dl>
         <dt>Undefined</dt>
-          <dd><i>Undefined</i></dd>
+          <dd>Undefined</dd>
         <dt>Undefined</dt>
-          <dd><i>Undefined</i></dd>
+          <dd>Undefined</dd>
       </dl>
+      </dd>
     </div>
     <div class="subBox">
       <h3>Links</h3>
       <dl>
         <dt>Undefined</dt>
-          <dd><i>Undefined</i></dd>
+          <dd>Undefined</dd>
         <dt>Undefined</dt>
-          <dd><a href="index.html" target="_blank"><i>Home</i></a></dd>
+          <dd><a href="about:blank" target="_blank">about:blank</a></dd>
       </dl>
     </div>
   </div>
   <div id=projectPage class="mainBox" style="flex-grow: 1"><!-- PROJECT PAGE -->
     <div class="subBox"><h1>Projects</h1></div>
     <div class="subBox">
-      <dt><b>Neural Networks(Completed)</b></dt>
+      <h3>WebSite(WIP)</h3>
+        <dd>Website TODO list:</dd>
+<dd>
+<dl>
+        <dd>-Algorithms Page</dd>
+        <dd>-Games Page</dd>
+        <dd>-Recent Projects(home page)</dd>
+        <dd>-About Me(home page)</dd>
+        <dd>-Links(home page)</dd>
+</dl>
+</dd>
+    </div>
+    <div class="subBox">
+      <h3>Neural Networks(Completed)</h3>
         <dd>Basic neural network lib.</dd>
-        <dd><a href="./Neural-Networks" target="_blank"><i>Neural Networks Demo</i></a></dd>
+        <dd><a href="./Neural-Networks" target="_blank">Neural Networks Demo</a></dd>
         <dd><iframe src="https://prototype-12.github.io/Neural-Networks/index.html" width=400 height=200>iframe not loaded</iframe></dd>
     </div>
     <div class="subBox">
-      <dt><b>WFC(On Indefinite Hold)</b></dt>
-        <dd><i>Wave function collapse algorithm.</i></dd>
+      <h3>WFC(On Indefinite Hold)</h3>
+        <dd>Wave function collapse algorithm.</dd>
     </div>
     <div class="subBox">
-      <dt><b>Video maker/editor(On Indefinite Hold)</b></dt>
-        <dd><i>A video maker in pure JS.</i></dd>
+      <h3>Video maker/editor(On Indefinite Hold)</h3>
+        <dd>A video maker in pure JS.</dd>
     </div>
     <div class="subBox">
-      <dt><b>Physics Engine(WIP)</b></dt>
-        <dd><i>A basic box only 2d physics engine.</i></dd>
+      <h3>Physics Engine(On Indefinite Hold)</h3>
+        <dd>A basic box only 2d physics engine.</dd>
     </div>
     <div class="subBox">
-      <dt><b>Procedural Chemicals(Completed)</b></dt>
+      <h3>Procedural Chemicals(Completed)</h3>
         <dd>Procedural creation and reaction of new elements/materials/chemicals.</dd>
-        <dd><i><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</i></a></dd>
+        <dd><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</a></dd>
     </div>
   </div>
   <div id=videoPage class="mainBox" style="flex-grow: 1"><!-- VIDEO PAGE -->
     <div class="subBox"><h1>Videos</h1></div>
     <div class="subBox">
       <h3>Test Video</h3>
-      <video controls width="500" style="margin: 25 0 50 100; border: 3px solid #73AD21">
-        <source src="videos/test.webm" type="video/webm" />
-      </video>
+      <dd>
+        <video controls width="500" style="border: 3px solid #73AD21; //margin: 25 0 50 100;">
+          <source src="videos/test.webm" type="video/webm" />
+        </video>
+      </dd>
+      <dd>A test video.</dd>
     </div>
     <div class="subBox">
       <h3>Video format</h3>
-      <div>I've stored and formated my videos in such a way that they can be accessed remotely and easily.</div>
-      <iframe src="fetch-example.txt" width=400 height=200>iframe not loaded</iframe>
-      <div>You can compare the video-list.txt file with a localy saved one for new videos.</div>
-      <div>Or I may add a release time stamp(unix time of course) to videos in the furture.</div>
-      <div>If the above happens please check the video-list-format.txt for changes.</div>
+      <dd>I've stored and formated my videos in such a way that they can be accessed remotely and easily.</dd>
+      <dd><iframe src="fetch-example.txt" width=400 height=200>iframe not loaded</iframe></dd>
+      <dd>You can compare the video-list.txt file with a localy saved one for new videos.</dd>
+      <dd>Or I may add a release time stamp(unix time of course) to videos in the furture.</dd>
+      <dd>If the above happens please check the video-list-format.txt for changes.</dd>
     </div>
   </div>
   <div id=gamesPage class="mainBox" style="flex-grow: 1"><!-- GAMES PAGE -->
@@ -117,20 +159,24 @@ WIP
   <div id=algorithmsPage class="mainBox" style="flex-grow: 1"><!-- ALGORITHMS PAGE -->
     <div class="subBox"><h1>Algorithms</h1></div>
     <div class="subBox">
-WIP
+    <div>Astar</div>
+    <div>WFC</div>
+    <div>Boids</div>
+    <div>Slime Mold</div>
+    <div>Spacial Hashing</div>
     </div>
   </div>
   <div id=portalPage class="mainBox" style="flex-grow: 1"><!-- PORTAL PAGE -->
     <div class="subBox"><h1>Portal</h1></div>
     <div class="subBox">
-      <dt><b>Kadin's Stuff</b></dt>
+      <h3>Kadin's Stuff</h3>
         <dd>My friend Kadin's stuff</dd>
-        <dd><a href="https://kadincool.github.io/" target="_blank"><i>Kadin's homepage</i></a></dd>
+        <dd><a href="https://kadincool.github.io/" target="_blank">Kadin's homepage</a></dd>
     </div>
     <div class="subBox">
-      <dt><b>Xem's Stuff</b></dt>
+      <h3>Xem's Stuff</h3>
         <dd>An interesting fellow JS programmer</dd>
-        <dd><a href="https://xem.github.io/" target="_blank"><i>Xem's homepage</i></a></dd>
+        <dd><a href="https://xem.github.io/" target="_blank">Xem's homepage</a></dd>
     </div>
   </div>
 </div><!-- ^ NEW PAGES HERE ^ -->
@@ -138,21 +184,21 @@ WIP
 changePage(0)
 function changePage(page) {
   homePage.style.display = page==0?"block":"none"
-  menuHome.style.fontWeight = page==0?"bold":"normal"
+  menuHome.classList = "menuButton "+(page==0?"b":"")
 
   projectPage.style.display = page==1?"block":"none"
-  menuProjects.style.fontWeight = page==1?"bold":"normal"
+  menuProjects.classList = "menuButton "+(page==1?"b":"")
 
   videoPage.style.display = page==2?"block":"none"
-  menuVideos.style.fontWeight = page==2?"bold":"normal"
+  menuVideos.classList = "menuButton "+(page==2?"b":"")
 
   gamesPage.style.display = page==3?"block":"none"
-  menuGames.style.fontWeight = page==3?"bold":"normal"
+  menuGames.classList = "menuButton "+(page==3?"b":"")
 
   algorithmsPage.style.display = page==4?"block":"none"
-  menuAlgorithms.style.fontWeight = page==4?"bold":"normal"
+  menuAlgorithms.classList = "menuButton "+(page==4?"b":"")
 
   portalPage.style.display = page==5?"block":"none"
-  menuPortal.style.fontWeight = page==5?"bold":"normal"
+  menuPortal.classList = "menuButton "+(page==5?"b":"")
 }
 </script>
